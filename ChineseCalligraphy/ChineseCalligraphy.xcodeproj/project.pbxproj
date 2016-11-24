@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A65829FE1DE6834100FBF5F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65829FD1DE6834100FBF5F2 /* AppDelegate.swift */; };
+		A6582A001DE6834100FBF5F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65829FF1DE6834100FBF5F2 /* ViewController.swift */; };
+		A6582A031DE6834100FBF5F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6582A011DE6834100FBF5F2 /* Main.storyboard */; };
+		A6582A051DE6834100FBF5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6582A041DE6834100FBF5F2 /* Assets.xcassets */; };
+		A6582A081DE6834100FBF5F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6582A061DE6834100FBF5F2 /* LaunchScreen.storyboard */; };
+		A6582A101DE6836300FBF5F2 /* CalligraphyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6582A0F1DE6836300FBF5F2 /* CalligraphyView.swift */; };
+		A6582A121DE69F4F00FBF5F2 /* StarDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6582A111DE69F4F00FBF5F2 /* StarDot.swift */; };
+		A6582A171DE6BEF600FBF5F2 /* MasterPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6582A161DE6BEF600FBF5F2 /* MasterPiece.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A65829FA1DE6834100FBF5F2 /* ChineseCalligraphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChineseCalligraphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65829FD1DE6834100FBF5F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A65829FF1DE6834100FBF5F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A6582A021DE6834100FBF5F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6582A041DE6834100FBF5F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A6582A071DE6834100FBF5F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A6582A091DE6834100FBF5F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6582A0F1DE6836300FBF5F2 /* CalligraphyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalligraphyView.swift; sourceTree = "<group>"; };
+		A6582A111DE69F4F00FBF5F2 /* StarDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarDot.swift; sourceTree = "<group>"; };
+		A6582A161DE6BEF600FBF5F2 /* MasterPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterPiece.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A65829F71DE6834100FBF5F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A65829F11DE6834100FBF5F2 = {
+			isa = PBXGroup;
+			children = (
+				A6582A131DE6BEE000FBF5F2 /* Shapes */,
+				A65829FC1DE6834100FBF5F2 /* ChineseCalligraphy */,
+				A65829FB1DE6834100FBF5F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A65829FB1DE6834100FBF5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A65829FA1DE6834100FBF5F2 /* ChineseCalligraphy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A65829FC1DE6834100FBF5F2 /* ChineseCalligraphy */ = {
+			isa = PBXGroup;
+			children = (
+				A6582A111DE69F4F00FBF5F2 /* StarDot.swift */,
+				A65829FD1DE6834100FBF5F2 /* AppDelegate.swift */,
+				A65829FF1DE6834100FBF5F2 /* ViewController.swift */,
+				A6582A0F1DE6836300FBF5F2 /* CalligraphyView.swift */,
+				A6582A011DE6834100FBF5F2 /* Main.storyboard */,
+				A6582A041DE6834100FBF5F2 /* Assets.xcassets */,
+				A6582A061DE6834100FBF5F2 /* LaunchScreen.storyboard */,
+				A6582A091DE6834100FBF5F2 /* Info.plist */,
+			);
+			path = ChineseCalligraphy;
+			sourceTree = "<group>";
+		};
+		A6582A131DE6BEE000FBF5F2 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				A6582A141DE6BEE000FBF5F2 /* Characters */,
+				A6582A151DE6BEE000FBF5F2 /* Others */,
+			);
+			name = Shapes;
+			path = ChineseCalligraphy/Shapes;
+			sourceTree = "<group>";
+		};
+		A6582A141DE6BEE000FBF5F2 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		A6582A151DE6BEE000FBF5F2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				A6582A161DE6BEF600FBF5F2 /* MasterPiece.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A65829F91DE6834100FBF5F2 /* ChineseCalligraphy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6582A0C1DE6834100FBF5F2 /* Build configuration list for PBXNativeTarget "ChineseCalligraphy" */;
+			buildPhases = (
+				A65829F61DE6834100FBF5F2 /* Sources */,
+				A65829F71DE6834100FBF5F2 /* Frameworks */,
+				A65829F81DE6834100FBF5F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChineseCalligraphy;
+			productName = ChineseCalligraphy;
+			productReference = A65829FA1DE6834100FBF5F2 /* ChineseCalligraphy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A65829F21DE6834100FBF5F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Dong, Yiming (Agoda)";
+				TargetAttributes = {
+					A65829F91DE6834100FBF5F2 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8RV6PY6MK7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A65829F51DE6834100FBF5F2 /* Build configuration list for PBXProject "ChineseCalligraphy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A65829F11DE6834100FBF5F2;
+			productRefGroup = A65829FB1DE6834100FBF5F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A65829F91DE6834100FBF5F2 /* ChineseCalligraphy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A65829F81DE6834100FBF5F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6582A081DE6834100FBF5F2 /* LaunchScreen.storyboard in Resources */,
+				A6582A051DE6834100FBF5F2 /* Assets.xcassets in Resources */,
+				A6582A031DE6834100FBF5F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A65829F61DE6834100FBF5F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6582A171DE6BEF600FBF5F2 /* MasterPiece.swift in Sources */,
+				A6582A001DE6834100FBF5F2 /* ViewController.swift in Sources */,
+				A6582A121DE69F4F00FBF5F2 /* StarDot.swift in Sources */,
+				A65829FE1DE6834100FBF5F2 /* AppDelegate.swift in Sources */,
+				A6582A101DE6836300FBF5F2 /* CalligraphyView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A6582A011DE6834100FBF5F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6582A021DE6834100FBF5F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A6582A061DE6834100FBF5F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6582A071DE6834100FBF5F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6582A0A1DE6834100FBF5F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6582A0B1DE6834100FBF5F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6582A0D1DE6834100FBF5F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8RV6PY6MK7;
+				INFOPLIST_FILE = ChineseCalligraphy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dymx103.ChineseCalligraphy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A6582A0E1DE6834100FBF5F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8RV6PY6MK7;
+				INFOPLIST_FILE = ChineseCalligraphy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dymx103.ChineseCalligraphy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A65829F51DE6834100FBF5F2 /* Build configuration list for PBXProject "ChineseCalligraphy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6582A0A1DE6834100FBF5F2 /* Debug */,
+				A6582A0B1DE6834100FBF5F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6582A0C1DE6834100FBF5F2 /* Build configuration list for PBXNativeTarget "ChineseCalligraphy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6582A0D1DE6834100FBF5F2 /* Debug */,
+				A6582A0E1DE6834100FBF5F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A65829F21DE6834100FBF5F2 /* Project object */;
+}

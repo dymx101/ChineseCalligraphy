@@ -42,6 +42,7 @@ class CalligraphyView: UIView {
     
 //    var lines = [UIBezierPath]()
 //    var currentLine: UIBezierPath?
+    let bgColor = UIColor.white
     
     var dotLines = [StrokeLine]()
     var currentDotLine: StrokeLine?
@@ -69,14 +70,21 @@ class CalligraphyView: UIView {
         let rect2 = rect.insetBy(dx: 20, dy: rect.height * 0.25)
         
         let path1 = UIBezierPath(rect: rect)
-        UIColor.yellow.setFill()
+        bgColor.setFill()
         path1.fill()
         
-        Nine.drawCanvas1(frame: rect2)
-        
+    
         if let context = UIGraphicsGetCurrentContext() {
             
+            Nine.drawCanvas1(frame: rect2)
+            context.saveGState()
+            let finalPath = Nine.finalPath(frame: rect2)
+            finalPath.addClip()
+            bgColor.setFill()
+            path1.fill()
+            context.restoreGState()
             
+            // Draw lines
             let paths = Nine.shape(frame: rect2)
             
             dotLines.forEach({ (strokeLine) in

@@ -91,7 +91,7 @@ public class Nine : NSObject {
         UIColor.red.setStroke()
 
         finalPath.fill()
-        finalPath.lineWidth = 1
+        finalPath.lineWidth = 4
         finalPath.stroke()
         
     }

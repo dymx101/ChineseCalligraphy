@@ -15,6 +15,8 @@
 		A6582A101DE6836300FBF5F2 /* CalligraphyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6582A0F1DE6836300FBF5F2 /* CalligraphyView.swift */; };
 		A6582A121DE69F4F00FBF5F2 /* StarDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6582A111DE69F4F00FBF5F2 /* StarDot.swift */; };
 		A6582A171DE6BEF600FBF5F2 /* MasterPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6582A161DE6BEF600FBF5F2 /* MasterPiece.swift */; };
+		A6B5F2FF1DE7360700CD1202 /* Nine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B5F2FE1DE7360700CD1202 /* Nine.swift */; };
+		A6B5F3011DE7502000CD1202 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B5F3001DE7502000CD1202 /* Stroke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A6582A0F1DE6836300FBF5F2 /* CalligraphyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalligraphyView.swift; sourceTree = "<group>"; };
 		A6582A111DE69F4F00FBF5F2 /* StarDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarDot.swift; sourceTree = "<group>"; };
 		A6582A161DE6BEF600FBF5F2 /* MasterPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterPiece.swift; sourceTree = "<group>"; };
+		A6B5F2FE1DE7360700CD1202 /* Nine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nine.swift; sourceTree = "<group>"; };
+		A6B5F3001DE7502000CD1202 /* Stroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 		A6582A141DE6BEE000FBF5F2 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				A6B5F2FE1DE7360700CD1202 /* Nine.swift */,
+				A6B5F3001DE7502000CD1202 /* Stroke.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -172,10 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6582A171DE6BEF600FBF5F2 /* MasterPiece.swift in Sources */,
+				A6B5F2FF1DE7360700CD1202 /* Nine.swift in Sources */,
 				A6582A001DE6834100FBF5F2 /* ViewController.swift in Sources */,
 				A6582A121DE69F4F00FBF5F2 /* StarDot.swift in Sources */,
 				A65829FE1DE6834100FBF5F2 /* AppDelegate.swift in Sources */,
 				A6582A101DE6836300FBF5F2 /* CalligraphyView.swift in Sources */,
+				A6B5F3011DE7502000CD1202 /* Stroke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +349,7 @@
 				A6582A0E1DE6834100FBF5F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

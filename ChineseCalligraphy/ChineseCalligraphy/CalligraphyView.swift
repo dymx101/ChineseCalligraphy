@@ -8,23 +8,58 @@
 
 import UIKit
 
+class StrokeLine {
+    var dots = [CGPoint]()
+    
+    func addDot(dot: CGPoint) {
+        dots.append(dot)
+    }
+    
+    func belongingPathFrom(paths: [UIBezierPath]) -> UIBezierPath? {
+        
+        var belongingPath: UIBezierPath? = nil
+        
+        var maxNumberOfDots: Int = 0
+        paths.forEach { (path) in
+            var numberOfDots = 0
+            dots.forEach({ (dot) in
+                if path.contains(dot) {
+                    numberOfDots += 1
+                }
+            })
+            
+            if numberOfDots > maxNumberOfDots {
+                belongingPath = path
+                maxNumberOfDots = numberOfDots
+            }
+        }
+        
+        return belongingPath
+    }
+}
+
 class CalligraphyView: UIView {
     
-    var lines = [UIBezierPath]()
-    var dragStartPoint: CGPoint?
-    var currentLine: UIBezierPath?
+//    var lines = [UIBezierPath]()
+//    var currentLine: UIBezierPath?
+    
+    var dotLines = [StrokeLine]()
+    var currentDotLine: StrokeLine?
     
     override init(frame: CGRect) {
         
         super.init(frame: frame)
         
-        let gesture = UIPanGestureRecognizer(target: self, action: #selector(drag))
-        addGestureRecognizer(gesture)
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapAction))
+        doubleTap.numberOfTapsRequired = 2
+//        doubleTap.cancelsTouchesInView = false
+        addGestureRecognizer(doubleTap)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 
     override func draw(_ rect: CGRect) {
         
@@ -37,45 +72,69 @@ class CalligraphyView: UIView {
         UIColor.yellow.setFill()
         path1.fill()
         
-        StarDot.drawCanvas1(frame: rect2)
+        Nine.drawCanvas1(frame: rect2)
         
         if let context = UIGraphicsGetCurrentContext() {
-            context.saveGState()
             
-            StarDot.shape(frame: rect2).addClip()
-            lines.forEach { (line) in
+            
+            let paths = Nine.shape(frame: rect2)
+            
+            dotLines.forEach({ (strokeLine) in
                 
-                UIColor.black.setStroke()
-                line.lineWidth = 20
-                line.stroke()
-            }
+                context.saveGState()
+                
+                if let belongingPath = strokeLine.belongingPathFrom(paths: paths) {
+                    belongingPath.addClip()
+                }
+                
+                strokeLine.dots.forEach({ (point) in
+                    UIColor.black.withAlphaComponent(0.1).setFill()
+                    let outterPath = UIBezierPath(arcCenter: point, radius: 30, startAngle: CGFloat(0), endAngle: CGFloat(M_PI * 2), clockwise: true)
+                    outterPath.fill()
+                    
+                    UIColor.black.withAlphaComponent(0.3).setFill()
+                    let centerPath = UIBezierPath(arcCenter: point, radius: 20, startAngle: CGFloat(0), endAngle: CGFloat(M_PI * 2), clockwise: true)
+                    centerPath.fill()
+                    
+                    UIColor.black.setFill()
+                    let dotPath = UIBezierPath(arcCenter: point, radius: 15, startAngle: CGFloat(0), endAngle: CGFloat(M_PI * 2), clockwise: true)
+                    dotPath.fill()
+                })
+                
+                context.restoreGState()
+            })
             
-            context.restoreGState()
         }
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         image?.draw(in: rect)
-        
-        print("redrawed!!!!")
     }
 
-    func drag(gesture: UIPanGestureRecognizer) {
-        let location = gesture.location(in: self)
+    func doubleTapAction(gesture: UITapGestureRecognizer) {
         
-        switch gesture.state {
-        case .began:
-            currentLine = UIBezierPath()
-            lines.append(currentLine!)
-            currentLine?.lineCapStyle = .round
-            currentLine?.move(to: location)
-        case .changed:
-            currentLine?.addLine(to: location)
-        case .ended, .cancelled:
-            currentLine = nil
-            dragStartPoint = nil
-        default: break
+        dotLines.removeAll()
+        setNeedsDisplay()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let location = touches.first?.location(in: self) else {
+            return
         }
+        
+        currentDotLine = StrokeLine()
+        dotLines.append(currentDotLine!)
+        currentDotLine?.addDot(dot: location)
+        
+        setNeedsDisplay()
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let location = touches.first?.location(in: self) else {
+            return
+        }
+        
+        currentDotLine?.addDot(dot: location)
         
         setNeedsDisplay()
     }
